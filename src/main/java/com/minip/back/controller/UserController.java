@@ -21,7 +21,7 @@ public class UserController {
     @GetMapping("/user")
     public Result getAllUser(){
        // Map<String,Object> map = new LinkedHashMap<>();
-        return  Result.ok(usermapper.findAll());
+        return  Result.ok().data("item",usermapper.findAll());
     }
 
 }

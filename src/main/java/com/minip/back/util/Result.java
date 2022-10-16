@@ -1,11 +1,17 @@
 package com.minip.back.util;
 
-public class Result<T> {
-    private Integer code;
+import java.util.HashMap;
+import java.util.Map;
 
-    private String message;
+public class Result {
 
-    private T data;
+    public Boolean getSuccess() {
+        return success;
+    }
+
+    public void setSuccess(Boolean success) {
+        this.success = success;
+    }
 
     public Integer getCode() {
         return code;
@@ -23,78 +29,71 @@ public class Result<T> {
         this.message = message;
     }
 
-    public T getData() {
+    private Boolean success;
+
+    private Integer code;
+
+    private String message;
+
+    private Map<String, Object> data = new HashMap<String, Object>();
+
+    public Map<String, Object> getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(Map<String, Object> data) {
         this.data = data;
     }
+
     public Result(){}
 
-    protected  static  <T> Result<T> build(T data){
-        Result<T> result = new Result<>();
-        if(data != null)
-            result.setData(data);
-        return  result;
+    public static Result ok(){
+        Result r = new Result();
+        //r.setSuccess(ResultCodeEnum.SUCCESS.getMessage());
+        r.setCode(ResultCodeEnum.SUCCESS.getCode());
+        r.setMessage(ResultCodeEnum.SUCCESS.getMessage());
+        return r;
     }
 
-
-    public static <T> Result<T>  build(T body,ResultCodeEnum resultCodeEnum){
-        Result<T> result =build(body);
-        result.setCode(resultCodeEnum.getCode());
-        result.setMessage(resultCodeEnum.getMessage());
-        return result;
-
+    public static Result error(){
+        Result r = new Result();
+        //r.setSuccess(ResultCodeEnum.UNKNOWN_REASON.getSuccess());
+        r.setCode(ResultCodeEnum.FAIL.getCode());
+        r.setMessage(ResultCodeEnum.FAIL.getMessage());
+        return r;
     }
 
-
-    public  static<T> Result<T> ok(){
-        return Result.ok();
+    public static Result setResult(ResultCodeEnum resultCodeEnum){
+        Result r = new Result();
+        //r.setSuccess(resultCodeEnum.getSuccess());
+        r.setCode(resultCodeEnum.getCode());
+        r.setMessage(resultCodeEnum.getMessage());
+        return r;
     }
 
-    /**
-     * 操作成功
-     * @param data
-     * @param <T>
-     * @return
-     */
-    public static<T> Result<T> ok(T data){
-        Result<T> result = build(data);
-        return build(data, ResultCodeEnum.SUCCESS);
-    }
-
-    public static<T> Result<T> fail(){
-        return Result.fail(null);
-    }
-
-    /**
-     * 操作失败
-     * @param data
-     * @param <T>
-     * @return
-     */
-    public static<T> Result<T> fail(T data){
-        Result<T> result = build(data);
-        return build(data, ResultCodeEnum.FAIL);
-    }
-
-    public Result<T> message(String msg){
-        this.setMessage(msg);
+    public Result success(Boolean success){
+        this.setSuccess(success);
         return this;
     }
 
-    public Result<T> code(Integer code){
+    public Result message(String message){
+        this.setMessage(message);
+        return this;
+    }
+
+    public Result code(Integer code){
         this.setCode(code);
         return this;
     }
 
+    public Result data(String key, Object value){
+        this.data.put(key, value);
+        return this;
+    }
 
-    public boolean isOk() {
-        if(this.getCode().intValue() == ResultCodeEnum.SUCCESS.getCode().intValue()) {
-            return true;
-        }
-        return false;
+    public Result data(Map<String, Object> map){
+        this.setData(map);
+        return this;
     }
 
 
