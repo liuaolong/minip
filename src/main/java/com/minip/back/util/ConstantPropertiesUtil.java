@@ -7,16 +7,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConstantPropertiesUtil implements InitializingBean {
 
-    @Value("${endpoint}")
-    private String endPoint;
+    @Value("${tencent.cos.file.region}")
+    private String  region;
 
-    @Value("${access_key}")
+    @Value("${tencent.cos.file.secretid}")
     private String secretId;
 
-    @Value("${secret_key}")
+    @Value("${tencent.cos.file.secretkey}")
     private String secretKey;
 
-    @Value("${buckname}")
+    @Value("${tencent.cos.file.bucketname}")
     private String bucketName;
 
     public static String END_POINT;
@@ -26,7 +26,7 @@ public class ConstantPropertiesUtil implements InitializingBean {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        END_POINT = endPoint;
+        END_POINT =  region;
         ACCESS_KEY_ID = secretId;
         ACCESS_KEY_SECRET = secretKey;
         BUCKET_NAME = bucketName;
