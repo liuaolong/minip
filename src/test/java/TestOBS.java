@@ -20,8 +20,7 @@ public class TestOBS {
 
     public static void main(String[] args) {
         // 1 初始化用户身份信息（secretId, secretKey）。
-        String secretId = "AKIDeATi7LL6dw41jCQPPPIyPbAXqeMsANL4";
-        String secretKey = "e4GCtLlBTYP2SsIftukNmAUdYIrDQTKx";
+
         COSCredentials cred = new BasicCOSCredentials(secretId, secretKey);
         // 2 设置 bucket 的地域, COS 地域的简称请参照 https://cloud.tencent.com/document/product/436/6224
         Region region = new Region("ap-guangzhou");

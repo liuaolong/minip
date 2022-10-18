@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="69652417-69db-4ae9-ac29-1dbb509b6a96" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestOBS.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestOBS.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +145,7 @@
       <workItem from="1665812261449" duration="2412000" />
       <workItem from="1665885734476" duration="15580000" />
       <workItem from="1665981609035" duration="17543000" />
-      <workItem from="1666058232954" duration="8512000" />
+      <workItem from="1666058232954" duration="8767000" />
     </task>
     <task id="LOCAL-00001" summary="liu2">
       <created>1665888382180</created>
@@ -183,7 +182,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666077647236</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update teacher operation">
+      <created>1666078301507</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666078301507</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,11 +235,11 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1746" y="222" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/2560.320.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1666009781846" />
-    <state x="1217" y="383" key="CommitChangelistDialog2" timestamp="1666077646203">
+    <state x="1217" y="383" key="CommitChangelistDialog2" timestamp="1666078300621">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1217" y="383" key="CommitChangelistDialog2/0.0.2560.1400@0.0.2560.1400" timestamp="1665909156568" />
-    <state x="1217" y="383" key="CommitChangelistDialog2/2560.320.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1666077646203" />
+    <state x="1217" y="383" key="CommitChangelistDialog2/2560.320.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1666078300621" />
     <state x="1353" y="474" key="FileChooserDialogImpl" timestamp="1665927309301">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -282,10 +288,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1620" y="438" key="Maven.ArtifactSearchDialog/0.0.2560.1400@0.0.2560.1400" timestamp="1665888299267" />
-    <state x="1398" y="438" key="Vcs.Push.Dialog.v2" timestamp="1666078275240">
+    <state x="1398" y="438" key="Vcs.Push.Dialog.v2" timestamp="1666078311262">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1398" y="438" key="Vcs.Push.Dialog.v2/0.0.2560.1400@0.0.2560.1400" timestamp="1665909160741" />
-    <state x="1398" y="438" key="Vcs.Push.Dialog.v2/2560.320.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1666078275240" />
+    <state x="1398" y="438" key="Vcs.Push.Dialog.v2/2560.320.1920.1040/0.0.2560.1400@0.0.2560.1400" timestamp="1666078311262" />
   </component>
 </project>
