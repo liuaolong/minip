@@ -1,10 +1,9 @@
-package com.minip.back.entity;
+package com.minip.back.entity.vo;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
-public class Course {
-    private static final long serialVersionUID = 1L;
+public class CourseFormVo {
+
 
     public Long getId() {
         return id;
@@ -13,8 +12,6 @@ public class Course {
     public void setId(Long id) {
         this.id = id;
     }
-
-    private Long id;
 
     public Long getTeacherId() {
         return teacherId;
@@ -64,14 +61,6 @@ public class Course {
         this.lessonNum = lessonNum;
     }
 
-    public Float getDurationSum() {
-        return durationSum;
-    }
-
-    public void setDurationSum(Float durationSum) {
-        this.durationSum = durationSum;
-    }
-
     public String getCover() {
         return cover;
     }
@@ -80,37 +69,15 @@ public class Course {
         this.cover = cover;
     }
 
-    public Long getBuyCount() {
-        return buyCount;
+    public String getDescription() {
+        return description;
     }
 
-    public void setBuyCount(Long buyCount) {
-        this.buyCount = buyCount;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public Long getViewCount() {
-        return viewCount;
-    }
-
-    public void setViewCount(Long viewCount) {
-        this.viewCount = viewCount;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
-
-    public Date getPublishTime() {
-        return publishTime;
-    }
-
-    public void setPublishTime(Date publishTime) {
-        this.publishTime = publishTime;
-    }
+    private Long id;
 
     private Long teacherId;
 
@@ -124,16 +91,8 @@ public class Course {
 
     private Integer lessonNum;
 
-    private Float durationSum;
-
     private String cover;
 
-    private Long buyCount;
-
-    private Long viewCount;
-
-    private Integer status;
-
-    private Date publishTime;
+    private String description;
 
 }
